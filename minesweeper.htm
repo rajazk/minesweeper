@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minesweeper</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="script.js"></script>
+	<script>
+
+	window.onload = (event) => {
+		initializeGame()
+	};	
+	</script>
+	</head>
+  <body>
+      <div id="box">
+         <h2>My Game!</h2>
+		 <a onclick="do_startGame('Beginner')" >Level 1</a> | 
+		 <a onclick="do_startGame('Intermediate')" >Level 2</a> |
+		 <a onclick="do_startGame('Advanced')" >Level 3</a> 
+		<br>		 
+			<img id="splash" style="display: none;" src="loader.gif">			
+            <div id="field"></div>
+            <br>
+          <div id="lost" style="display: none;">
+            <h3>You got bombed!</h3>
+            <button id="new-game-button" type="button" onclick="reload()">Start Again</button>
+          </div>
+          <div id="won" style="display: none;">
+            <h3>You Win!</h3>
+            <button id="new-game-button" type="button" onclick="reload()">Start New</button>
+          </div>		  
+      </div>
+  </body>
+</html>
